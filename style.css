@@ -1,3 +1,4 @@
+*{box-sizing: border-box;}
 body{
     margin: 0;
     padding: 1rem;
@@ -11,10 +12,33 @@ background: radial-gradient(ellipse at center,  #d5cea6 0%,#a4a868 78%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5cea6', endColorstr='#a4a868',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
-.container{
-    margin: auto;
-}
+
 input{
     padding: 1rem;
     border-radius: 10px;
+    outline: none;
 }
+input:hover{
+    background-color: rgb(12, 180, 180);
+}
+button{
+    cursor: pointer;
+}
+button,
+img{
+    border: none;
+    outline:none ;
+    background: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    width: 100%;
+}
+
