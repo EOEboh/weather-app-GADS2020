@@ -6,17 +6,8 @@ body{
      
 }
 body{
-background: #d5cea6; /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover,  #d5cea6 0%, #a4a868 78%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover,  #d5cea6 0%,#a4a868 78%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center,  #d5cea6 0%,#a4a868 78%); 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5cea6', endColorstr='#a4a868',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-}
-
-
-input:hover{
-    background-color: rgb(12, 180, 180);
+   background: #ffffff; 
+   
 }
 button{
     cursor: pointer;
@@ -50,6 +41,7 @@ ul{
     border-radius: 10px;
     outline: none;
     width: 100%;
+    margin-bottom: 2rem;
 }
 .top-side form .msg{
     position: absolute;
@@ -69,8 +61,8 @@ ul{
     position: relative;
     padding: 40px 10%;
     border-radius: 20px;
-    background: gray;
-    
+    background: #0d3775;
+    margin-top: 2rem;
 }
 .bottom-side .city::after {
     content: '';
