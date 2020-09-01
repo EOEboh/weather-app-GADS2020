@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;  
+}
+body{
+background: #d5cea6; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #d5cea6 0%, #a4a868 78%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #d5cea6 0%,#a4a868 78%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  #d5cea6 0%,#a4a868 78%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5cea6', endColorstr='#a4a868',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.container{
+    margin: auto;
+}
+input{
+    padding: 1rem;
+    border-radius: 10px;
+}
