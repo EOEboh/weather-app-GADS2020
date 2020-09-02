@@ -89,24 +89,30 @@ if(resultItemsArray.length > 0){
       showResults.appendChild(li);
  
       
-    let searchHistory =[];
-    searchHistory.push(inputVal);
-
-    window.localStorage.setItem('searchinput', JSON.stringify(searchHistory));
-    JSON.parse(window.localStorage.getItem('searchinput'));
+    
+ 
 
     })
     .catch(() => {
       msg.textContent = "Please enter a valid city";
     });
 
-  msg.textContent = "";
-  form.reset();
-  input.focus();
+    
+      msg.textContent = "";
+      form.reset();
+      input.focus();
+
+    let searchHistory = JSON.parse(localStorage.getItem("searchinput")) || [];
+    searchHistory.push(inputVal);
+
+    window.localStorage.setItem('searchinput', JSON.stringify(searchHistory));
+    JSON.parse(window.localStorage.getItem('searchinput'));
+    localStorage.getItem("searchinput")
+    
+if (localStorage.getItem("searchinput")){
+    console.log(searchHistory)
+}
+
+
 });
 
-
-let searchHistory = JSON.parse(localStorage.getItem("searchinput")) || [];
-if (localStorage.getItem("searchinput")){
-    searchHistory.map(inputVal)
-}

@@ -11,10 +11,17 @@ body{
 h1{
 font-family: 'Fredoka One', cursive;
 font-size: 200%;}
-button{
+
+ .bottom-side form button{
     cursor: pointer;
+     font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    
 }
-button,
+
 img{
     border: none;
     outline:none ;
@@ -50,6 +57,7 @@ ul{
 input[type="text"]::placeholder {               
     /* Firefox, Chrome, Opera */ 
     text-align: left; 
+    font-size: 1em;
 }
 .top-side form .msg{
     position: absolute;
@@ -69,9 +77,9 @@ input[type="text"]::placeholder {
     position: relative;
     padding: 40px 10%;
     border-radius: 20px;
-    background: rgb(112, 110, 110);
+    background: #ffffff;
     margin-top: 2rem;
-    color: #ffffff;
+    color: rgb(63, 61, 61);
     width: 100%;
     font-family: 'Montserrat Alternates', sans-serif;
 }
@@ -125,16 +133,9 @@ input[type="text"]::placeholder {
         margin: auto;
      
     }
-  }
-
-  @media screen and (min-width:480px){
-    .bottom-side .results{
-        display: grid;
-        gap: 30px 20px;
-        grid-template-columns: auto auto; 
-        padding: 30px;
-    }
 }
+
+ 
 @media screen and (max-width:1024px){
     .bottom-side{
         margin-top: 40px;
