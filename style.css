@@ -1,0 +1,141 @@
+*{box-sizing: border-box;}
+body{
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace; 
+     
+}
+body{
+   background: #0d3775;  
+}
+h1{
+font-family: 'Fredoka One', cursive;
+font-size: 200%;}
+button{
+    cursor: pointer;
+}
+button,
+img{
+    border: none;
+    outline:none ;
+    background: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    width: 100%;
+    margin: auto;
+}
+.top-side form{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.top-side form input{
+    font-size: 1.5rem;
+    padding: .2rem .2rem .5rem;
+    border-radius: 10px;
+    outline: none;
+    width: 80%;
+    margin-bottom: 2rem;
+    background: white url(./img/search.png) no-repeat right;
+
+}
+input[type="text"]::placeholder {               
+    /* Firefox, Chrome, Opera */ 
+    text-align: left; 
+}
+.top-side form .msg{
+    position: absolute;
+    bottom: -40px;
+    max-width: 300px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: red;
+}
+.bottom-side .results{
+    display: grid;
+    gap: 30px 20px;
+    grid-template-columns: auto auto;
+
+}
+.bottom-side .city{
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: rgb(112, 110, 110);
+    margin-top: 2rem;
+    color: #ffffff;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.bottom-side .city::after {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: 0.3;
+    border-radius: 20px;
+    background: #000000;
+  }
+  .bottom-side figcaption{
+      margin-top: 0.5rem; 
+         
+  }
+
+  .bottom-side .cityTemp {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  .bottom-side .city sup {
+    font-size: 0.7rem;
+  }
+  .bottom-side .cityName sup {
+    padding: 0.2em 0.6em;
+    border-radius: 30px;
+    color: gray;
+    background: orange
+  }
+  .bottom-side .cityIcon {
+    margin-top: 10px;
+    width: 100px;  
+  }
+  .container{
+      width: 100%;
+      margin: auto;   
+  }
+
+  /**************** Media queries ********************** */
+  @media screen and (max-width:450px){
+    .bottom-side .results{
+        display: grid;
+        gap: 30px 20px;
+        grid-template-columns: auto ;
+        margin: auto;
+     
+    }
+  }
+
+  @media screen and (min-width:480px){
+    .bottom-side .results{
+        display: grid;
+        gap: 30px 20px;
+        grid-template-columns: auto auto; 
+        padding: 30px;
+    }
+}
+@media screen and (max-width:1024px){
+    .bottom-side{
+        margin-top: 40px;
+    }
+}

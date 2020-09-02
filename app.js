@@ -38,7 +38,7 @@ if(resultItemsArray.length > 0){
         return content == inputVal.toLowerCase();
     });
     if(filteredArray.length > 0){
-        msg.textContent = `The weather for ${filteredArray[0].querySelector('.cityName span').textContent} has been brought out already.... Otherwise you can be more specific with your search by providing the country code as well.`;
+        msg.textContent = `The weather for ${filteredArray[0].querySelector('.cityName span').textContent} has been brought out already..`
         // 
         form.reset();
         input.focus();
@@ -94,4 +94,5 @@ if(resultItemsArray.length > 0){
   form.reset();
   input.focus();
 });
+
 
