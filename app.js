@@ -78,7 +78,7 @@ if(resultItemsArray.length > 0){
         <figure>
           <img class="cityIcon" src=${icon} alt=${weather[0]["main"]}>
           <figcaption>${weather[0]["description"]}<br/><b>Feels like
-          ${main.feels_like}°C</b></figcaption>
+          ${Math.round(main.feels_like)}°C</b></figcaption>
         </figure>
       `;
       
