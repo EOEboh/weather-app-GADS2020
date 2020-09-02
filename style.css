@@ -6,9 +6,11 @@ body{
      
 }
 body{
-   background: #ffffff; 
-   
+   background: #0d3775;  
 }
+h1{
+font-family: 'Fredoka One', cursive;
+font-size: 200%;}
 button{
     cursor: pointer;
 }
@@ -40,8 +42,14 @@ ul{
     padding: .2rem .2rem .5rem;
     border-radius: 10px;
     outline: none;
-    width: 100%;
+    width: 80%;
     margin-bottom: 2rem;
+    background: white url(./img/search.png) no-repeat right;
+
+}
+input[type="text"]::placeholder {               
+    /* Firefox, Chrome, Opera */ 
+    text-align: left; 
 }
 .top-side form .msg{
     position: absolute;
@@ -61,8 +69,10 @@ ul{
     position: relative;
     padding: 40px 10%;
     border-radius: 20px;
-    background: #0d3775;
+    background: rgb(112, 110, 110);
     margin-top: 2rem;
+    color: #ffffff;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 .bottom-side .city::after {
     content: '';
@@ -85,7 +95,7 @@ ul{
     font-size: 4rem;
     font-weight: bold;
     margin-top: 10px;
-    color: white;
+    color: #ffffff;
   }
   .bottom-side .city sup {
     font-size: 0.7rem;
@@ -102,8 +112,7 @@ ul{
   }
   .container{
       width: 100%;
-      margin: auto;
-      
+      margin: auto;   
   }
 
   /**************** Media queries ********************** */
