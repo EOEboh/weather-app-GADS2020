@@ -4,17 +4,19 @@ const input = document.querySelector(".top-side input");
 const msg = document.querySelector(".top-side .msg");
 const showResults = document.querySelector(".bottom-side .results");
 
+
 // my api details from openweathermap
 const api = {
     key:"a4ebe081f0c56979bcbbe865881154ee",
 baseUrl:"https://api.openweathermap.org/data/2.5/weather?"
 }
 
-
 // stopping the form from submitting by using preventDefault and then grabbing the user input in the search field
+
 form.addEventListener("submit", e => {
   e.preventDefault();
   const inputVal = input.value;
+
 
 //   this code is to prevent the display of the same results(same city)
 const resultItems = showResults.querySelectorAll('.bottom-side .city');
@@ -56,13 +58,14 @@ if(resultItemsArray.length > 0){
 //     msg.textContent = "Please search for a valid city 😩";
 //   });
   const url = `${api.baseUrl}q=${inputVal}&appid=${api.key}&units=metric`;
-  console.log(url)
+  console.log(url);
 
 //   the icon code holds the weather info of the searched city
+
   fetch(url)
     .then(response => response.json()) 
     .then(data => {
-      const { main, name, sys, weather } = data;
+      const { main, name, sys, weather } = data; //declaring data object
       const icon = `https://openweathermap.org/img/wn/${
         weather[0]["icon"]
       }@4x.png`;
@@ -84,7 +87,14 @@ if(resultItemsArray.length > 0){
       
       li.innerHTML = markup;
       showResults.appendChild(li);
+ 
       
+    let searchHistory =[];
+    searchHistory.push(inputVal);
+
+    window.localStorage.setItem('searchinput', JSON.stringify(searchHistory));
+    JSON.parse(window.localStorage.getItem('searchinput'));
+
     })
     .catch(() => {
       msg.textContent = "Please enter a valid city";
@@ -96,3 +106,7 @@ if(resultItemsArray.length > 0){
 });
 
 
+let searchHistory = JSON.parse(localStorage.getItem("searchinput")) || [];
+if (localStorage.getItem("searchinput")){
+    searchHistory.map(inputVal)
+}

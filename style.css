@@ -72,6 +72,7 @@ input[type="text"]::placeholder {
     background: rgb(112, 110, 110);
     margin-top: 2rem;
     color: #ffffff;
+    width: 100%;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 .bottom-side .city::after {
@@ -120,7 +121,7 @@ input[type="text"]::placeholder {
     .bottom-side .results{
         display: grid;
         gap: 30px 20px;
-        grid-template-columns: auto ;
+        grid-template-columns: auto auto;
         margin: auto;
      
     }
