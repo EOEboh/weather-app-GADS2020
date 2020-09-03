@@ -1,4 +1,6 @@
 
+
+
 const form = document.querySelector(".top-side form");
 const input = document.querySelector(".top-side input");
 const msg = document.querySelector(".top-side .msg");
@@ -107,10 +109,10 @@ if(resultItemsArray.length > 0){
 
     window.localStorage.setItem('searchinput', JSON.stringify(searchHistory));
     JSON.parse(window.localStorage.getItem('searchinput'));
-    localStorage.getItem("searchinput")
+    localStorage.getItem("searchinput");
     
 if (localStorage.getItem("searchinput")){
-    console.log(searchHistory)
+    searchHistory
 }
 
 
