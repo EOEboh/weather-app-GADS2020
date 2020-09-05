@@ -6,7 +6,7 @@ body{
      
 }
 body{
-   background: #0d3775;  
+   background: #0d3775; 
 }
 h1{
 font-family: 'Fredoka One', cursive;
@@ -70,7 +70,7 @@ input[type="text"]::placeholder {
     border-radius: 20px;
     background: #a8a6a6;
     margin-top: 1rem;
-    color: rgb(63, 61, 61);
+    color: #3f3d3d;
     width: 100%;
     font-family: 'Montserrat Alternates', sans-serif;
 }
