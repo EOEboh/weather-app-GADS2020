@@ -132,3 +132,10 @@ input[type="text"]::placeholder {
         margin-top: 40px;
     }
 }
+
+/* Installation display */
+@media all and (display-mode: standalone) {
+    body {
+      background-color: yellow;
+    }
+  }

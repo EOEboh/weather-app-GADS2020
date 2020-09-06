@@ -6,14 +6,15 @@ const input = document.querySelector(".top-side input");
 const msg = document.querySelector(".top-side .msg");
 const showResults = document.querySelector(".bottom-side .results");
 
-
 // my api details from openweathermap
 const api = {
     key:"a4ebe081f0c56979bcbbe865881154ee",
 baseUrl:"https://api.openweathermap.org/data/2.5/weather?"
 }
 
+
 // stopping the form from submitting by using preventDefault and then grabbing the user input in the search field
+
 
 form.addEventListener("submit", e => {
   e.preventDefault();
@@ -104,6 +105,8 @@ if(resultItemsArray.length > 0){
       form.reset();
       input.focus();
 
+
+
     let searchHistory = JSON.parse(localStorage.getItem("searchinput")) || [];
     searchHistory.push(inputVal);
 
@@ -116,6 +119,6 @@ if (localStorage.getItem("searchinput")){
 }
 
 
-});
+    });   
 
-
+ 
