@@ -136,6 +136,6 @@ input[type="text"]::placeholder {
 /* Installation display */
 @media all and (display-mode: standalone) {
     body {
-      background-color: yellow;
+      background-color: #0d3775;
     }
   }
