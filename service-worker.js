@@ -1,17 +1,19 @@
   
   'use strict';
 
-  // CODELAB: Update cache names any time any of the cached files change.
+  // cache name; to be updated any time files change
   const CACHE_NAME = 'static-cache-v1';
   
-  // CODELAB: Add list of files to cache here.
+  // list of files to cache 
   const FILES_TO_CACHE = [
       './offline.html',
   ];
   
+  // install event; opens the cache with caches.open() and provides a cache name 
+  // with cache.addAll(),response is added to the cache after taking a list of URLs 
   self.addEventListener('install', (evt) => {
     console.log('[ServiceWorker] Install');
-    // CODELAB: Precache static resources here.
+    // Precache the offline page here
     evt.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
           console.log('[ServiceWorker] Pre-caching offline page');
@@ -22,9 +24,10 @@
     self.skipWaiting();
   });
   
+  // activate event 
   self.addEventListener('activate', (evt) => {
     console.log('[ServiceWorker] Activate');
-    // CODELAB: Remove previous cached data from disk.
+    // cleans up old data from cache 
     evt.waitUntil(
         caches.keys().then((keyList) => {
           return Promise.all(keyList.map((key) => {
@@ -39,9 +42,9 @@
     self.clients.claim();
   });
   
+  // fetch event
   self.addEventListener('fetch', (evt) => {
     console.log('[ServiceWorker] Fetch', evt.request.url);
-    // CODELAB: Add fetch event handler here.
     if (evt.request.mode !== 'navigate') {
         // Not a page navigation, bail.
         return;

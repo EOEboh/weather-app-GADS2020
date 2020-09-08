@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="weather app">
-
-<meta name="theme-color" content="#2F3BA2;" />
+    <!-- meta descriptions for search engines -->
+    <meta name="description" content="weather app"> 
+    <!-- meta theme colour -->
+    <meta name="theme-color" content="#2F3BA2;" />
+    <!-- Manifest JSON -->  
     <link rel="manifest" href="./manifest.json">
     <!-- IOS meta tags -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Weather PWA">
     <title>Weather App</title>
-    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png">
-<!-- IOS meta tags -->
-
+    <link rel="apple-touch-icon" href="./images/icons/icon-152x152.png"> 
+    <!-- styles CSS -->
     <link rel="stylesheet" href="./style.css">
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat+Alternates:ital@1&display=swap" rel="stylesheet">
-
-    <!-- CODELAB: Add the install script here -->
-<script src="/scripts/install.js"></script>
-
+    <!-- install JS file -->
+    <script src="/scripts/install.js"></script>
 </head>
-<body>
+<body> 
   <script>
-  // CODELAB: Register service worker.
+  // Registering the service worker
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('./service-worker.js')
@@ -46,12 +46,14 @@
       </section>
       <section class="bottom-side">
         <div class="container">
-          <ul class="results"></ul>
+          <ul class="results">
+          </ul>
           <form id="history"></form>
         </div>
 
-      
+      <!-- main JS file -->
       <script src="./app.js"></script>
+      <!-- service worker JS -->
       <script src="./service-worker.js"></script>
 </body>
 </html>

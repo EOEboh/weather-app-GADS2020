@@ -1,16 +1,16 @@
-// CODELAB: Add event listener for beforeinstallprompt event
+// this beforeinstallprompt event notifies the user that the app can be installed in their device
 window.addEventListener('beforeinstallprompt', saveBeforeInstallPromptEvent);
 
-// CODELAB: Add code to save event & show the install button.
+// saves event and show install button
 deferredInstallPrompt = evt;
 installButton.removeAttribute('hidden');
 
-// CODELAB: Add code show install prompt & hide the install button.
+// show install prompt and hide install button
 deferredInstallPrompt.prompt();
 // Hide the install button, it can't be called twice.
 evt.srcElement.setAttribute('hidden', true);
 
-// CODELAB: Log user response to prompt.
+// check what the responded to the install dialogue by checking the promise returned by the userChoice property
 deferredInstallPrompt.userChoice
     .then((choice) => {
       if (choice.outcome === 'accepted') {
@@ -21,8 +21,8 @@ deferredInstallPrompt.userChoice
       deferredInstallPrompt = null;
     });
 
-    // CODELAB: Add event listener for appinstalled event
+    // Add event listener for appinstalled event for alternatively installing the app via Chrome's three dot menu or any other browser's 
 window.addEventListener('appinstalled', logAppInstalled);
 
-// CODELAB: Add code to log the event
+// Add code to log the event
 console.log('Weather App was installed.', evt);

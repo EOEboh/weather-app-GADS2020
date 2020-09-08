@@ -6,11 +6,14 @@ const input = document.querySelector(".top-side input");
 const msg = document.querySelector(".top-side .msg");
 const showResults = document.querySelector(".bottom-side .results");
 
+
+
 // my api details from openweathermap
 const api = {
     key:"a4ebe081f0c56979bcbbe865881154ee",
 baseUrl:"https://api.openweathermap.org/data/2.5/weather?"
 }
+
 
 
 // stopping the form from submitting by using preventDefault and then grabbing the user input in the search field
@@ -91,7 +94,6 @@ if(resultItemsArray.length > 0){
       li.innerHTML = markup;
       showResults.appendChild(li);
  
-      
     
  
 
@@ -100,23 +102,21 @@ if(resultItemsArray.length > 0){
       msg.textContent = "Please enter a valid city";
     });
 
+    let searchHistory = JSON.parse(localStorage.getItem("searchinput")) || [];
+    searchHistory.push(inputVal);
+  
+    
+    localStorage.setItem('searchinput', JSON.stringify(searchHistory));
+    
+    var lastSearch = JSON.parse(localStorage.getItem("searchinput"));
+    console.log(lastSearch);
+    
+
     
       msg.textContent = "";
       form.reset();
       input.focus();
-
-
-
-    let searchHistory = JSON.parse(localStorage.getItem("searchinput")) || [];
-    searchHistory.push(inputVal);
-
-    window.localStorage.setItem('searchinput', JSON.stringify(searchHistory));
-    JSON.parse(window.localStorage.getItem('searchinput'));
-    localStorage.getItem("searchinput");
-    
-if (localStorage.getItem("searchinput")){
-    searchHistory
-}
+ 
 
 
     });   
