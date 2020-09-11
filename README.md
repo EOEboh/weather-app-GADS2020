@@ -37,3 +37,15 @@ No JavaScript or CSS framework or library was used.
 Openweathermap API was used. It is free and open source.
 With well detailed documentation. Check out <a href="https://openweathermap.org/api">HERE</a>
 
+<h2>Live Demo</h2>
+You can install the web app right into your device and it behaves just like a native app
+Check out <a href="https://smash-it-weather-app.netlify.app/">HERE</a>
+
+<h2>Credits</h2>
+My credits go to the GADS2020 mentor Mani Mohamed and my co-scholars.
+
+My design inspiration from uplabs.
+
+
+
+
